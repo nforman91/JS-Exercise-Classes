@@ -108,14 +108,11 @@ drive(distance){
 
 const car = new Car('Subaru', 30);
 
+car.drive(0);
 car.fill(5);
 
-console.log('task 2a:', car.tank);
+console.log('task 2:', car.drive());
 
-car.drive(50);
-
-console.log('task 2b', car.odometer);
-console.log('task 2c', car.tank);
 
 
 
@@ -149,7 +146,7 @@ const newLambdasian = new Lambdasian({
   location: 'Seattle'
 })
 
-console.log('task 3:', newLambdasian.speak);
+console.log('task 3:', newLambdasian.speak());
 
 /*
   TASK 4
@@ -191,7 +188,8 @@ const newInstructor = new Instructor({
   catchPhrase: 'Bazinga'
 })
 
-console.log('task 4:', newInstructor.grade);
+console.log('task 4:', newInstructor.demo('CS999'));
+console.log('task 4:', newInstructor.grade(Lambdasian, 'CS45'));
 
 
 /*
@@ -239,7 +237,9 @@ const newStudent = new Student({
   favSubjects: ['HTML', 'CSS', 'JS']
 })
 
-console.log('task 5:', newStudent.listSubjects);
+console.log('task 5:', newStudent.listSubjects());
+console.log('task 5:', newStudent.PRAssignment('CS5000'));
+console.log('task 5:', newStudent.sprintChallenge('CS54'));
 
 /*
   TASK 6
@@ -278,7 +278,8 @@ const newProjMgr = new ProjectManager({
   favInstructor: 'Dave',
 })
 
-console.log(newProjMgr.debugsCode('Nathan', 'CS1'));
+console.log('task 6:', newProjMgr.standUp('@webstudygroup'));
+console.log('task 6:', newProjMgr.debugsCode(ProjectManager, 'CS2'));
 
 
 /*
@@ -289,6 +290,13 @@ console.log(newProjMgr.debugsCode('Nathan', 'CS1'));
       + This method, when called, will check the grade of the student and see if they're ready to graduate from Lambda School
       + If the student's grade is above a 70% let them graduate! Otherwise go back to grading their assignments to increase their score.
 */
+
+// class StudentGrade extends Student{
+//   constructor(attributes){
+
+//   }
+// }
+
 
 
 //End of Challenge
